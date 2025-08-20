@@ -11,13 +11,16 @@ test('Full Practice Test Flow' , async ({page}) => {
     const practicePage = new PracticePage(page);
     const loginPage = new LoginPage(page);
     const securePage = new SecurePage(page);
+    const homepage2 = new HomePage(page);
+    const testexception = new SecurePage(page);
 
     await homepage.goto();
     await homepage.clickpracticelink();
     await practicePage.clicktestloginlink();
     await loginPage.login("student", "Password123");
     await securePage.verifyloginsuccess();
-
+    await homepage2.clickpracticelink();
+    await testexception.testexceptionlink();
 
 
 
