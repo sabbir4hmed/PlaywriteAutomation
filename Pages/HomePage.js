@@ -13,6 +13,9 @@ class HomePage {
         await
             this.page.waitForLoadState('networkidle');
 
+        await
+             this.page.waitForTimeout(2000);
+
     }
 
     async clickpracticelink() {
@@ -21,6 +24,9 @@ class HomePage {
 
         await
             this.page.waitForLoadState('networkidle');
+
+        await
+             this.page.waitForTimeout(2000);
 
     }
 }
