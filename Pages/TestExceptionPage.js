@@ -24,8 +24,7 @@ class TestExceptionPage
         await 
             this.page.waitForLoadState('networkidle');
 
-        await
-             this.page.waitForTimeout(2000);
+      
 
         await
     
@@ -34,8 +33,7 @@ class TestExceptionPage
         await
             this.page.waitForLoadState('networkidle');
 
-        await
-             this.page.waitForTimeout(2000);
+       
 
         await
             this.savebutton.click();
