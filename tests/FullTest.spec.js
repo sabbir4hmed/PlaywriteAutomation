@@ -4,6 +4,7 @@ const {HomePage} = require('../Pages/HomePage');
 const {PracticePage} = require('../Pages/PracticePage');
 const {LoginPage} = require('../Pages/LoginPage');
 const {SecurePage} = require('../Pages/SecurePage');
+const {TestExceptionPage} = require('../Pages/TestExceptionPage');
 
 test('Full Practice Test Flow' , async ({page}) => {
 
@@ -14,6 +15,8 @@ test('Full Practice Test Flow' , async ({page}) => {
     const homepage2 = new HomePage(page);
     const testexception = new SecurePage(page);
 
+    const testExceptionPage = new TestExceptionPage(page);
+
     await homepage.goto();
     await homepage.clickpracticelink();
     await practicePage.clicktestloginlink();
@@ -22,7 +25,8 @@ test('Full Practice Test Flow' , async ({page}) => {
     await homepage2.clickpracticelink();
     await testexception.testexceptionlink();
 
-
+    await testExceptionPage.clickeditfield("Burger");
+    await testExceptionPage.clickaddbutton();
 
 
 })
