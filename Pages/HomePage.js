@@ -1,3 +1,5 @@
+const { allure } = require('allure-playwright');
+
 class HomePage {
 
     constructor(page) {
@@ -8,11 +10,15 @@ class HomePage {
     async goto() {
 
         await
+
+        allure.step('Navigating to Home Page', async () => {{
+             await
             this.page.goto("https://practicetestautomation.com/");
 
         await
             this.page.waitForLoadState('networkidle');
 
+        }});
     }
 
     async clickpracticelink() {
