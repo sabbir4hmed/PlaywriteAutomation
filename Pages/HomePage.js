@@ -18,7 +18,9 @@ class HomePage {
         await
             this.page.waitForLoadState('networkidle');
 
-    }
+    });
+
+}
 
     async clickpracticelink() {
         await
