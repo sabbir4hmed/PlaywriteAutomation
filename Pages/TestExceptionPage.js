@@ -23,6 +23,9 @@ class TestExceptionPage
 
         await 
             this.page.waitForLoadState('networkidle');
+
+      
+
         await
     
              this.editfield.fill(foodname);
@@ -30,10 +33,14 @@ class TestExceptionPage
         await
             this.page.waitForLoadState('networkidle');
 
+       
+
         await
             this.savebutton.click();
         await
             this.page.waitForLoadState('networkidle');
+
+        
     }
 
     async clickaddbutton()
@@ -43,8 +50,7 @@ class TestExceptionPage
         await
             this.page.waitForLoadState('networkidle');
 
-        await
-             this.page.waitForTimeout(8000);
+        
     } 
 }
 

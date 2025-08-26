@@ -14,6 +14,9 @@ class SecurePage {
     async testexceptionlink() {
         await this.testException.click();
         await this.page.waitForLoadState('networkidle');
+
+    await
+             this.page.waitForTimeout(2000);
     }
 }
 
